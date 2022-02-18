@@ -1,0 +1,8 @@
+{
+  "name": "tsChallenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:abigmiu/tsChallenge.git",
+  "author": "abigmiu <1552487872@qq.com>",
+  "license": "MIT"
+}
