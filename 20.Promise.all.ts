@@ -26,15 +26,11 @@
 
 /* _____________ 你的代码 _____________ */
 
-declare function PromiseAll<T extends any[]>(values: Readonly<T>): Promise<{
+declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
     [K in keyof T]: T[K] extends Promise<infer R> ? R : T[K]
 }>
 
-// declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{
-//     [K in keyof T]: T[K] extends Promise<infer R> ? R : T[K]
-// }>
-
-/* _____________ 测试用例 _____________ */
+/* _____________ 测试用例 __________ ___ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 const promiseAllTest1 = PromiseAll([1, 2, 3] as const)
