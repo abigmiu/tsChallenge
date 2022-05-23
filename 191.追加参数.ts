@@ -24,7 +24,7 @@
 
 /* _____________ 你的代码 _____________ */
 
-type AppendArgument<Fn extends Function, A extends unknown> = Fn extends (...args: any[]) => infer T ? (args, x: A) => T : Fn
+type AppendArgument<Fn extends Function, A extends unknown> = Fn extends (...args: infer U) => infer T ? (...args: [...U, A]) => T : Fn
 
 
 /* _____________ 测试用例 _____________ */
